@@ -1,0 +1,202 @@
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #EDEEF0;
+   box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.background-image-container {
+    position: relative;
+    width: 100%;
+    height: 30vw;
+    max-height: 581px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slogan {
+    position: relative;
+    left: 13.7%;
+    width: 29.58%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.slogan p {
+    color: white;
+    font-size: 4vw;
+    font-family: Inter, serif;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 67.3%;
+    height: 49.4%;
+    margin-left: 16.2%;
+    padding: 0 35px;
+    margin-bottom: 10%;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.name p {
+    font-family: Inter, serif;
+    font-size: 3vw;
+    color: #0A1C34;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #0A1C34;
+}
+
+.wrapper {
+    max-width: 1300px;
+    width: 100%;
+    position: relative;
+    margin-top: 6%;
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: #FFFF;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: hidden;
+    padding: 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card .img {
+    background: #547392;
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.card .img img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card h2 {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 1.56rem;
+    margin: 0;
+    color: #547392;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100%/2) - 9px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
