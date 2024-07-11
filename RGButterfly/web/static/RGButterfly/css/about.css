@@ -1,0 +1,297 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+main{
+    display: flex;
+    background-color: #EDEEF0;
+    position: absolute;
+    height: 100%;
+}
+
+.wrapper-main{
+    width: 50%;
+    margin-top: 5%;
+}
+
+.container-main{
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.container-first{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.wrapper-map{
+    display: flex;
+    margin-top: 30px;
+}
+
+.container-map{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-overview{
+    width: 50%;
+    margin-top: 5%;
+}
+
+.container-overview{
+    margin-left: 5%;
+    margin-right: 17%;
+}
+
+.stick{
+    width: 80px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #1b1b1b;
+}
+
+.container-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.container-post{
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+}
+
+.text{
+    font-size: 30px;
+    text-align: justify;
+}
+
+.post-text{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-logo{
+    width: 40px;
+    height: 30px;
+}
+
+h1{
+    font-size: 46px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.container-map-big{
+    visibility: visible;
+}
+
+.container-map-big-middle{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.container-map-middle{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.container-map-small{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+p{
+    margin-top: 0;
+}
+
+@media (max-width: 1400px){
+    .container-map-big{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .container-map-big-middle{
+        width: 500px;
+        height: 500px;
+        visibility: visible;
+    }
+
+    .container-map-middle{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .container-map-big{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .text{
+        font-size: 28px;
+        text-align: justify;
+    }
+
+    .container-post{
+        font-size: 28px;
+    }
+
+    .post-logo{
+        width: 36px;
+        height: 26px;
+    }
+
+    .wrapper-main{
+        margin-top: 10%;
+    }
+
+    .wrapper-overview{
+        margin-top: 10%;
+    }
+
+    h1{
+        font-size: 44px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1200px){
+    .container-map-big{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .container-map-big-middle{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .container-map-middle{
+        width: 400px;
+        height: 400px;
+        visibility: visible;
+    }
+
+    .wrapper-text{
+        margin-top: 20px;
+    }
+
+    .text{
+        font-size: 24px;
+        text-align: justify;
+    }
+
+    .container-post{
+        font-size: 24px;
+    }
+
+    .post-logo{
+        width: 32px;
+        height: 22px;
+    }
+
+    .wrapper-map{
+        margin-top: 20px;
+    }
+
+    .wrapper-main{
+        margin-top: 15%;
+    }
+
+    .wrapper-overview{
+        margin-top: 15%;
+    }
+
+    h1{
+        font-size: 40px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 900px){
+    .container-map-small{
+        width: 320px;
+        height: 320px;
+        visibility: visible;
+    }
+
+    .container-map-middle{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .wrapper-text{
+        margin-top: 20px;
+    }
+
+    .text{
+        font-size: 24px;
+        text-align: justify;
+    }
+
+    .container-post{
+        font-size: 24px;
+    }
+
+    .post-logo{
+        width: 32px;
+        height: 22px;
+    }
+
+    .wrapper-map{
+        margin-top: 20px;
+    }
+
+    .wrapper-main{
+        margin-top: 20%;
+    }
+
+    .wrapper-overview{
+        margin-top: 20%;
+    }
+
+    h1{
+        font-size: 40px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
