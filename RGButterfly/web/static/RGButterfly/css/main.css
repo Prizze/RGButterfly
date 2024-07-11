@@ -42,8 +42,8 @@ body {
 .slogan p {
     color: white;
     font-size: 4vw;
-    font-family: Inter, serif;
-    font-weight: 900;
+    font-family: Inter, sans-serif;
+    font-weight: 1000;
     line-height: 1.2;
     margin: 0;
 }
@@ -57,7 +57,7 @@ body {
     height: 49.4%;
     margin-left: 16.2%;
     padding: 0 35px;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .name {
@@ -68,7 +68,7 @@ body {
 }
 
 .name p {
-    font-family: Inter, serif;
+    font-family: monospace;
     font-size: 3vw;
     color: #0A1C34;
     font-weight: 700;
@@ -79,7 +79,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 120%;
     height: 2px;
     border-radius: 4px;
     background-color: #0A1C34;
@@ -178,7 +178,7 @@ body {
 }
 
 .card h2 {
-    font-family: Inter, sans-serif;
+    font-family: monospace;
     font-weight: 400;
     font-size: 1.56rem;
     margin: 0;
@@ -187,6 +187,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* top | right | bottom | left */
+    padding: 0 1px 0 1px;
 }
 
 @media screen and (max-width: 1200px) {

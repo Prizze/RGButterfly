@@ -3,8 +3,11 @@
 
 
 {% block content %}
+
 <link rel="stylesheet" href="{% static 'RGButterfly/css/about.css' %}" type="text/css" media="all">
 <link href="//fonts.googleapis.com/css?family=Lato:100,400,800" rel="stylesheet">
+
+<div class = "wrapper">
         <div class="wrapper-main">
             <div class="container-main">
                 <div class="container-first">
@@ -47,17 +50,12 @@
                 <div class="container-text">
                     <div class="wrapper-text">
                         <div class="text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid asperiores at
-                                commodi
-                                cupiditate distinctio dolore doloremque,
-                                eaque eius, eligendi explicabo fuga iure laboriosam nobis nulla obcaecati odio pariatur
-                                perspiciatis quis quod reiciendis rem similique
-                                sint suscipit, temporibus ullam velit.</p>
+                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
                         </div>
                         <div class="container-post">
                             <div class="post-text">
-                                <img src="{% static 'RGButterfly/img/post.png' %}" alt="logo" class="post-logo">
-                                <p1>Связаться с нами:</p1>
+
+                                <p> <i class="fa-regular fa-envelope"></i> Связаться с нами:</p>
                             </div>
                             <p></p>
                             <p></p>
@@ -65,7 +63,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
+</div>
+
+
 {% endblock %}

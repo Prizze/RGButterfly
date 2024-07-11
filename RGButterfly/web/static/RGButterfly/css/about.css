@@ -1,16 +1,11 @@
-body{
+.wrapper{
+    display: flex;
+    background-color: #EDEEF0;
+    height: 100%;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-}
-
-
-main{
-    display: flex;
-    background-color: #EDEEF0;
-    position: absolute;
-    height: 100%;
-}
+    padding-bottom: 5%;
 
 .wrapper-main{
     width: 50%;
@@ -32,7 +27,7 @@ main{
 
 .wrapper-map{
     display: flex;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .container-map{
@@ -59,10 +54,11 @@ main{
 }
 
 .stick{
-    width: 80px;
+    width: 60%;
     height: 3px;
     border-radius: 5px;
     background-color: #1b1b1b;
+    margin-top: 30px;
 }
 
 .container-text{
@@ -70,6 +66,7 @@ main{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 }
 
 .wrapper-text{
@@ -87,11 +84,19 @@ main{
 .text{
     font-size: 30px;
     text-align: justify;
+
+}
+.text p{
+  font-family: monospace;
 }
 
 .post-text{
     display: flex;
     flex-direction: row;
+}
+
+.post-text p{
+    font-family: monospace;
 }
 
 .post-logo{
@@ -101,7 +106,7 @@ main{
 
 h1{
     font-size: 46px;
-    font-family: 'Lato', sans-serif;
+    font-family: monospace;
     font-weight: 600;
 }
 
@@ -159,6 +164,7 @@ p{
     .text{
         font-size: 28px;
         text-align: justify;
+        line-height: 1.4;
     }
 
     .container-post{
@@ -171,7 +177,7 @@ p{
     }
 
     .wrapper-main{
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
     .wrapper-overview{
@@ -180,7 +186,7 @@ p{
 
     h1{
         font-size: 44px;
-        font-family: 'Lato', sans-serif;
+        font-family: monospace;
         font-weight: 600;
         margin-bottom: 20px;
     }
@@ -212,6 +218,7 @@ p{
     .text{
         font-size: 24px;
         text-align: justify;
+            line-height: 1.4;
     }
 
     .container-post{
@@ -228,16 +235,16 @@ p{
     }
 
     .wrapper-main{
-        margin-top: 15%;
+        margin-top: 5%;
     }
 
     .wrapper-overview{
-        margin-top: 15%;
+        margin-top: 5%;
     }
 
     h1{
         font-size: 40px;
-        font-family: 'Lato', sans-serif;
+        font-family: monospace;
         font-weight: 600;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -264,6 +271,7 @@ p{
     .text{
         font-size: 24px;
         text-align: justify;
+            line-height: 1.4;
     }
 
     .container-post{
@@ -289,7 +297,7 @@ p{
 
     h1{
         font-size: 40px;
-        font-family: 'Lato', sans-serif;
+        font-family: monospace;
         font-weight: 600;
         margin-bottom: 20px;
         margin-top: 20px;
