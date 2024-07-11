@@ -2,4 +2,98 @@
 {% load static %}
 
 {% block content %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" type="text/css">
+<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<link rel="stylesheet" href="{% static 'RGButterfly/css/main.css' %}" type="text/css" media="all">
+
+    <div class="container">
+        <div class="background-image-container">
+            <img src="{% static 'RGButterfly/img/main_page.png' %}" class="background-image"/>
+            <div class="slogan">
+                <p>RGButterfly<br/>Идеи<br/>которые<br/>видны</p>
+            </div>
+        </div>
+    </div>
+    <div class="services">
+
+        <div class="name">
+            <p>Услуги</p>
+        </div>
+
+        <div class="stick"></div>
+
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel">
+                <li class="card">
+                    <div class="card-content">
+                        <div class="img"><img src="{% static 'RGButterfly/img/UF_printing.jpg' %}" alt="Image 1"></div>
+                        <h2>УФ печать на листовых материалах</h2>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="card-content">
+                        <div class="img"><img src="{% static 'RGButterfly/img/wide_formed.jpg' %}" alt="Image 2"></div>
+                        <h2>Широкоформатная латексная печать</h2>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="card-content">
+                        <div class="img"><img src="{% static 'RGButterfly/img/plotter.jpeg' %}" alt="Image 3"></div>
+                        <h2>Постпечатная обработка</h2>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="card-content">
+                        <div class="img"><img src="{% static 'RGButterfly/img/montage.jpg' %}" alt="Image 4"></div>
+                        <h2>Монтажные работы</h2>
+                    </div>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+    </div>
+    <script>
+        const carousel = document.querySelector(".carousel");
+        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+        const arrowBtns = document.querySelectorAll(".wrapper i");
+        const carouselChildrens = [...carousel.children];
+
+        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+        carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+        });
+
+        carouselChildrens.slice(0, cardPerView).forEach(card => {
+            carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+        });
+
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+
+        arrowBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+            });
+        });
+        const infiniteScroll = () => {
+            if(carousel.scrollLeft === 0) {
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+                carousel.classList.remove("no-transition");
+            }
+            else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.offsetWidth;
+                carousel.classList.remove("no-transition");
+            }
+        }
+
+        carousel.addEventListener("scroll", infiniteScroll);
+    </script>
 {% endblock %}
+
