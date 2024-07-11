@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,15 +7,137 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/db91f6837d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'RGButterfly/css/app.css' %}" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..1000&display=swap" rel="stylesheet">
+
 </head>
 <body>
-{% block content %}
-<<<<<<< HEAD:RGButterfly/web/templates/web/app.html
-=======
-    <h1>Заголовок</h1>
->>>>>>> 98f87ab22bac4b65f3a4700fb31c899daff8c4d1:RGButterfly/RGButterfly/templates/RGButterfly/app.html
+<header>
+    <div class = "container">
+        <nav>
+            <ul>
+                <li><a href="{% url 'main' %}"> <div class ="div-img"> <img src="{% static 'RGButterfly/img/plain-butterfly_62507.png' %}" alt="logo" > </div> RGButterfly</a></li>
+                <li class = "has-children">
+                    <button class="button" onclick="toggleSubMenu()"> Услуги<span style="margin-left:4px;"><i id="chevron" class="fa-solid fa-chevron-down fa-xs"></i></span></button>
+                        <div class = "sub-menu">
+                            <div class = "hr"></div>
+                            <div class = "column-container">
+                                <div class = "column">
+                                    <h2>УФ печать на листовых материалах</h2>
+                                    <a href=""><p>УФ печать на пластике</p></a>
+                                    <a href=""><p>УФ печать на пенокартоне</p></a>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class = "column">
+                                    <h2>Широкоформатная латексная печать</h2>
+                                    <a href=""><p>Печать плакатов на бумаге</p></a>
+                                    <a href=""><p>Печать на самоклейке</p></a>
+                                    <a href=""><p>Печать баннеров</p></a>
+                                    <a href=""><p>Печать бэклитов</p></a>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class = "column">
+                                    <h2>Постпечатная обработка</h2>
+                                    <a href=""><p>Плоттерная резка пленки</p></a>
+                                    <a href=""><p>Холодное ламинирование и накатка на основу</p></a>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class = "column">
+                                    <h2>Монтажные работы</h2>
+                                    <a href=""><p>Оклейка пленкой</p></a>
+                                    <a href=""><p>Монтаж баннеров</p></a>
+                                </div>
+                            </div>
+                        </div>
+                 </li>
+                <li><a href="{% url 'about' %}">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-{% endblock %}
+<main>
+    {% block content %}
 
+    {% endblock %}
+</main>
+
+<footer>
+    <div class = "hr-footer"></div>
+    <div class = "column-container footer">
+        <div class = "column">
+            <h5>Наши телефоны:</h5>
+            <p>+7-(917)-519-79-75</p>
+            <p>+7-(905)-797-84-48</p>
+            <p>+7-(495)-741-95-58</p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class = "column">
+            <h5>Наш адрес:</h5>
+            <p>123007, Москва, ул. 4-ая Магистральная д.5</p>
+            <p>ООО "Беренберг"</p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class = "column">
+            <h5>2012-2024 г.</h5>
+            <h5>&copy Проект "РГБатерфляй"</h5>
+            <p>Использования материалов с сайта проекта
+“РГБатерфляй” запрещено без согласия владельца сайта.</p>
+        </div>
+    </div>
+</footer>
+<div id = "overlay"></div>
+<script>function toggleSubMenu() {
+    const overlay = document.getElementById('overlay');
+    const subMenu = document.querySelector('.sub-menu');
+    const isOpen = subMenu.classList.toggle('open');
+    var hr = document.querySelector(".sub-menu .hr");
+    // Переключение анимации для hr
+    if (hr.classList.contains("expand")) {
+        hr.classList.remove("expand");
+    } else {
+        hr.classList.add("expand");
+    }
+    var chevron = document.getElementById("chevron");
+    if (chevron.classList.contains("rotate")) {
+        chevron.classList.remove("rotate");
+        chevron.classList.add("rotate-back");
+    } else {
+        chevron.classList.remove("rotate-back");
+        chevron.classList.add("rotate");
+    }
+
+    if (isOpen) {
+        overlay.style.visibility = 'visible';
+        overlay.style.opacity = '1';
+        subMenu.style.visibility = 'visible';
+        subMenu.style.maxHeight = '370px';
+        subMenu.style.opacity = '1';
+    } else {
+        overlay.style.opacity = '0';
+        subMenu.style.opacity = '0';
+        subMenu.style.maxHeight = '0';
+        setTimeout(() => {
+            overlay.style.visibility = 'hidden';
+            subMenu.style.visibility = 'hidden';
+        }, 500); // время анимации в миллисекундах (здесь 0.5 секунды)
+    }
+}
+// Закрытие подменю при клике на overlay
+document.getElementById('overlay').addEventListener('click', () => {
+    const subMenu = document.querySelector('.sub-menu');
+    const overlay = document.getElementById('overlay');
+    subMenu.classList.remove('open');
+    overlay.style.opacity = '0';
+    subMenu.style.opacity = '0';
+    subMenu.style.maxHeight = '0';
+    setTimeout(() => {
+        overlay.style.visibility = 'hidden';
+        subMenu.style.visibility = 'hidden';
+    }, 500); // время анимации в миллисекундах (здесь 0.5 секунды)
+});</script>
 </body>
 </html>
