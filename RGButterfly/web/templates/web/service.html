@@ -1,0 +1,114 @@
+{% extends "web/app.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'RGButterfly/css/service.css' %}" type="text/css" media="all">
+
+<div class="main-container">
+    <section class="service-container">
+        <article class="service-img-container">
+            <img src="{{ service.service_image.url }}" alt="{{ service.service_name }}" class="service-image">
+        </article>
+        <article class="service-about">
+            <h2 class="service-name">{{ service.service_name }}</h2>
+            <div class="option-toggle">
+                {% for option in options %}
+                    <button id="option-{{ option.id }}" class="option-button" data-option='{"name": "{{ option.option_name }}", "description": "{{ option.options_description }}"}' data-image-url="{{ option.option_image.url }}" onclick="toggleOption('{{ option.id }}')">{{ option.option_name }}</button>
+                {% endfor %}
+            </div>
+            <div class="service-description">
+                <p>{{ service.service_description }}</p>
+            </div>
+        </article>
+    </section>
+
+    <aside class="option-container">
+        <div class="stick-container">
+            <div class="stick"></div>
+        </div>
+
+        <nav class="menu">
+            <button id="description-btn" class="data-button" onclick="toggleDisplay('.description-data')">Описание</button>
+            <button id="deliver-btn" class="data-button" onclick="toggleDisplay('.deliver-data')">Доставка</button>
+            <button id="payment-btn" class="data-button" onclick="toggleDisplay('.payment-data')">Оплата</button>
+        </nav>
+
+        <section class="description-data">
+            <div class="text" id="description-text">
+                Выберите опцию для отображения описания.
+            </div>
+            <div class="example">
+                <img id="example-image" src="" alt="">
+            </div>
+        </section>
+        <section class="deliver-data">
+            <p>Информация о доставке</p>
+        </section>
+        <section class="payment-data">
+            <p>Информация об оплате</p>
+        </section>
+    </aside>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Функция для получения значения параметра из URL
+        function getParameterByName(name) {
+            const url = new URL(window.location.href);
+            const params = new URLSearchParams(url.search);
+            return params.get(name);
+        }
+
+        // Получаем значение параметра 'option' из URL
+        const optionId = getParameterByName('option');
+
+        // Если параметр 'option' существует и имеет значение
+        if (optionId) {
+            toggleOption(optionId);
+        }
+    });
+
+    function toggleOption(optionId) {
+        const buttons = document.querySelectorAll('.option-button');
+        buttons.forEach(button => {
+            if (button.id === 'option-' + optionId) {
+                button.classList.add('selected');
+            } else {
+                button.classList.remove('selected');
+            }
+        });
+
+        const optionButton = document.getElementById('option-' + optionId);
+        const imageUrl = optionButton.getAttribute('data-image-url');
+        const optionData = JSON.parse(optionButton.getAttribute('data-option'));
+
+        document.getElementById('description-text').innerHTML = optionData.description;
+        const exampleImage = document.getElementById('example-image');
+        exampleImage.src = imageUrl;
+        exampleImage.alt = optionData.name;
+
+        document.querySelector('.description-data').classList.add('active');
+        document.querySelector('.deliver-data').classList.remove('active');
+        document.querySelector('.payment-data').classList.remove('active');
+
+        document.querySelectorAll('.data-button').forEach(button => {
+            button.classList.remove('selected');
+        });
+        document.getElementById('description-btn').classList.add('selected');
+    }
+
+    function toggleDisplay(className) {
+        document.querySelectorAll('.description-data, .deliver-data, .payment-data').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.querySelector(className).classList.add('active');
+    }
+
+    document.querySelectorAll('.data-button').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.data-button').forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+        });
+    });
+</script>
+{% endblock %}

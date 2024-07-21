@@ -1,0 +1,147 @@
+:root {
+    --background-color: #EDEEF0;
+    --button-bg-color: #D9D9D9;
+    --button-selected-bg-color: #5A89B9;
+    --text-color: #000000;
+    --text-selected-color: #ffffff;
+    --stick-bg-color: #0A1C34;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.service-container {
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+
+.service-img-container {
+    width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-image {
+    width: 85%;
+    height: auto;
+    max-height: 72%;
+    object-fit: contain;
+}
+
+.service-about {
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-name {
+    margin: 3%;
+    margin-top: 6%;
+    margin-left: -6%;
+    font-size: x-large;
+}
+
+.option-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: var(--button-bg-color);
+    margin-bottom: 3%;
+    margin-left: -6%;
+    width: fit-content;
+}
+
+.option-button {
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: medium;
+}
+
+.option-button.selected {
+    background-color: var(--button-selected-bg-color);
+    color: var(--text-selected-color);
+}
+
+.option-toggle .option-button.selected {
+    border-radius: 14px;
+}
+
+.service-description {
+    margin-left: -6%;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stick-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stick {
+    width: 96%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--stick-bg-color);
+}
+
+.menu {
+    display: flex;
+    column-gap: 13%;
+    margin: 3% 8% 0;
+}
+
+.data-button {
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: medium;
+}
+
+.data-button.selected {
+    background-color: var(--button-selected-bg-color);
+    color: var(--text-selected-color);
+}
+
+.description-data,
+.deliver-data,
+.payment-data {
+    display: none;
+    width: 60%;
+    margin: 3% 8%;
+    flex-direction: column;
+}
+
+.example {
+    width: 43%;
+    display: flex;
+}
+
+#example-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10%;
+}
+
+.description-data.active,
+.deliver-data.active,
+.payment-data.active {
+    display: flex;
+}
