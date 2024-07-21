@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     background-color: #EDEEF0;
     height: 100%;
@@ -6,6 +6,7 @@
     padding: 0;
     overflow: hidden;
     padding-bottom: 5%;
+}
 
 .wrapper-main{
     width: 50%;
@@ -303,3 +304,28 @@ p{
         margin-top: 20px;
     }
 }
+
+@media (max-width: 768px){
+    .wrapper{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-overview{
+        width: 80%;
+    }
+
+    .wrapper-main{
+        width: 80%;
+    }
+
+    .container-overview{
+        margin: auto;
+    }
+
+    .container-main{
+        margin: auto;
+    }
+}
+
