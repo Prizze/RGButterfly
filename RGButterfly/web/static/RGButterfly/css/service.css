@@ -1,0 +1,152 @@
+:root {
+    --background-color: #EDEEF0;
+    --button-bg-color: #D9D9D9;
+    --button-selected-bg-color: #5A89B9;
+    --text-color: #000000;
+    --text-selected-color: #ffffff;
+    --stick-bg-color: #0A1C34;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.service-container {
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+
+.service-img-container {
+    width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    max-height: 72%;
+    object-fit: contain;
+}
+
+.service-about {
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-name {
+    /* top | right | bottom | left */
+    margin: 6% 0 3% 0;
+    font-size: x-large;
+}
+
+.option-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: var(--button-bg-color);
+    margin-bottom: 3%;
+
+    width: fit-content;
+}
+#option-7, #option-8, #option-1, #option-2, #option-9, #option-10{
+    width: 50%;
+}
+#option-3, #option-4, #option-5, #option-6{
+    width: 25%;
+}
+
+.option-button {
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: medium;
+}
+
+.option-button.selected {
+    background-color: var(--button-selected-bg-color);
+    color: var(--text-selected-color);
+    height:100%;
+}
+
+.option-toggle .option-button.selected {
+    border-radius: 14px;
+}
+
+.service-description {
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stick-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stick {
+    width: 96%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--stick-bg-color);
+}
+
+.menu {
+    display: flex;
+    column-gap: 13%;
+    margin: 3% 8% 0;
+}
+
+.data-button {
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: medium;
+}
+
+.data-button.selected {
+    background-color: var(--button-selected-bg-color);
+    color: var(--text-selected-color);
+}
+
+.description-data,
+.deliver-data,
+.payment-data {
+    display: none;
+    width: 60%;
+    margin: 3% 8%;
+    flex-direction: column;
+}
+
+.example {
+    width: 43%;
+    display: flex;
+}
+
+#example-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10%;
+}
+
+.description-data.active,
+.deliver-data.active,
+.payment-data.active {
+    display: flex;
+}
