@@ -302,4 +302,29 @@ p{
         margin-bottom: 20px;
         margin-top: 20px;
     }
-}}
+}
+
+@media (max-width: 768px){
+    .wrapper{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-overview{
+        width: 80%;
+    }
+
+    .wrapper-main{
+        width: 80%;
+    }
+
+    .container-overview{
+        margin: auto;
+    }
+
+    .container-main{
+        margin: auto;
+    }
+}
+

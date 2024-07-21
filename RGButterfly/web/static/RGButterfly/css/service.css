@@ -27,7 +27,7 @@ body {
 }
 
 .service-image {
-    width: 85%;
+    width: 100%;
     height: auto;
     max-height: 72%;
     object-fit: contain;
@@ -40,9 +40,8 @@ body {
 }
 
 .service-name {
-    margin: 3%;
-    margin-top: 6%;
-    margin-left: -6%;
+    /* top | right | bottom | left */
+    margin: 6% 0 3% 0;
     font-size: x-large;
 }
 
@@ -54,8 +53,14 @@ body {
     overflow: hidden;
     background-color: var(--button-bg-color);
     margin-bottom: 3%;
-    margin-left: -6%;
+
     width: fit-content;
+}
+#option-7, #option-8, #option-1, #option-2, #option-9, #option-10{
+    width: 50%;
+}
+#option-3, #option-4, #option-5, #option-6{
+    width: 25%;
 }
 
 .option-button {
@@ -70,6 +75,7 @@ body {
 .option-button.selected {
     background-color: var(--button-selected-bg-color);
     color: var(--text-selected-color);
+    height:100%;
 }
 
 .option-toggle .option-button.selected {
@@ -77,7 +83,6 @@ body {
 }
 
 .service-description {
-    margin-left: -6%;
 }
 
 .option-container {
