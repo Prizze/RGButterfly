@@ -271,7 +271,8 @@ footer{
         border-radius: 50%;
     }
     .rgbutterfly{
-        font-size: 20px;
+        font-size: 4vw;
+        font-weight: 600;
     }
     .rgbutterfly a{
         text-decoration: none;
@@ -317,16 +318,18 @@ footer{
         display: flex;
         align-items: flex-end;
      }
+
     .drop-menu ul li button{
         all: unset;
-        font-size: 28px;
+        font-size: 5vw;
         line-height: 2;
-
+        font-weight: 400;
     }
     .drop-menu ul li a{
         text-decoration: none;
         color: #0A1C34;
-        font-size: 28px;
+        font-size: 5vw;
+        font-weight: 400;
         line-height: 2;
 
     }
@@ -352,6 +355,7 @@ footer{
     }
     .drop-menu .sub-menu-small p a{
         line-height: 1.2;
+        font-size: 4.5vw; ;
     }
     .small-part{
         padding-left: 20px;
@@ -368,10 +372,13 @@ footer{
 
     .small-part h5{
         color: #0A1C34;
-        font-size: 1.1rem;
+        font-size: 3.5vw;
+        font-weight: 600;
     }
     .small-part p{
         color: #3D79A7;
+        font-size: 3vw;
+        font-weight: 300;
     }
 
 }

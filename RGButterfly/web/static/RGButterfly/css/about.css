@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     background-color: #EDEEF0;
     height: 100%;
@@ -6,6 +6,7 @@
     padding: 0;
     overflow: hidden;
     padding-bottom: 5%;
+}
 
 .wrapper-main{
     width: 50%;
@@ -87,6 +88,7 @@
 
 }
 .text p{
+  font-family: monospace;
 }
 
 .post-text{
@@ -95,6 +97,7 @@
 }
 
 .post-text p{
+    font-family: monospace;
 }
 
 .post-logo{
@@ -104,6 +107,7 @@
 
 h1{
     font-size: 46px;
+    font-family: monospace;
     font-weight: 600;
 }
 
@@ -183,6 +187,7 @@ p{
 
     h1{
         font-size: 44px;
+        font-family: monospace;
         font-weight: 600;
         margin-bottom: 20px;
     }
@@ -240,6 +245,7 @@ p{
 
     h1{
         font-size: 40px;
+        font-family: monospace;
         font-weight: 600;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -292,6 +298,7 @@ p{
 
     h1{
         font-size: 40px;
+        font-family: monospace;
         font-weight: 600;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -307,10 +314,15 @@ p{
 
     .wrapper-overview{
         width: 80%;
+        margin-top: 5vh;
     }
 
     .wrapper-main{
         width: 80%;
+        margin-top: 5vh;
+    }
+    .head .stick{
+        margin-top: 1vh;
     }
 
     .container-overview{
@@ -321,4 +333,3 @@ p{
         margin: auto;
     }
 }
-
