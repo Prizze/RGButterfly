@@ -13,7 +13,7 @@
             <h2 class="service-name">{{ service.service_name }}</h2>
             <div class="option-toggle">
                 {% for option in options %}
-                    <button id="option-{{ option.id }}" class="option-button" data-option='{"name": "{{ option.option_name }}", "description": "{{ option.options_description }}"}' data-image-url="{{ option.option_image.url }}" onclick="toggleOption('{{ option.id }}')">{{ option.option_name }}</button>
+                    <div class = "button-wrapper"><button id="option-{{ option.id }}" class="option-button" data-option='{"name": "{{ option.option_name }}", "description": "{{ option.options_description }}"}' data-image-url="{{ option.option_image.url }}" onclick="toggleOption('{{ option.id }}')">{{ option.option_name }}</button></div>
                 {% endfor %}
             </div>
             <div class="service-description">

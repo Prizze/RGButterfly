@@ -66,7 +66,7 @@
                             <img src="{% static 'RGButterfly/img/plain-butterfly_62507.png' %}" alt="logo" >
                         </div>
                         <div class = "rgbutterfly">
-                            RGButterfly
+                            <a href="{% url 'main' %}">RGButterfly</a>
                         </div>
                     </div>
                 </div>
@@ -80,16 +80,16 @@
             <div class = "drop-menu">
                     <ul>
                         <div class = "up">
-                            <div class = "left"><li><a href=""> Главная </a></li></div>
+                            <div class = "left"><li><a href="{% url 'main' %}"> Главная </a></li></div>
                             <div class = "right"><i onclick="close_menu('.drop-menu')" id = "x-mark" class="fa-solid fa-xmark fa-2xl"></i></div>
                         </div>
-                        <li><a href=""> О нас </a></li>
+                        <li><a href="{% url 'about' %}"> О нас </a></li>
                         <li> <button onclick = "toggleServices()"> Услуги <i id = "chevron-small" class="fa-solid fa-chevron-down fa-xs"></i>  </button>
                             <div class = "sub-menu-small">
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">УФ печать на листовых материалах</a></p>
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">Ширикоформатная латексная печать</a></p>
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">Постпечатная обработка</a></p>
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">Монтажные работы</a></p>
+                                <p> <i class="fa-solid fa-minus"></i> <a href="/service/1/?option=1">УФ печать на листовых материалах</a></p>
+                                <p> <i class="fa-solid fa-minus"></i> <a href="/service/2/?option=3">Ширикоформатная латексная печать</a></p>
+                                <p> <i class="fa-solid fa-minus"></i> <a href="/service/3/?option=7">Постпечатная обработка</a></p>
+                                <p> <i class="fa-solid fa-minus"></i> <a href="/service/4/?option=10">Монтажные работы</a></p>
                             </div>
                         </li>
                     </ul>
