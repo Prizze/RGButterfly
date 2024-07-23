@@ -1,0 +1,102 @@
+{% extends "web/app.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'RGButterfly/css/service.css' %}" type="text/css" media="all">
+
+<div class="main-container">
+    <section class="service-container">
+        <article class="service-img-container">
+            <img src="{{ service.service_image.url }}" alt="{{ service.service_name }}" class="service-image">
+        </article>
+        <article class="service-about">
+            <h2 class="service-name">{{ service.service_name }}</h2>
+            <div class="option-toggle">
+                {% for option in options %}
+                    <div class = "button-wrapper"><button id="option-{{ option.id }}" class="option-button" data-option='{"name": "{{ option.option_name }}", "description": "{{ option.options_description }}"}' data-image-url="{{ option.option_image.url }}" onclick="toggleOption('{{ option.id }}')">{{ option.option_name }}</button></div>
+                {% endfor %}
+            </div>
+            <div class="service-description">
+                <p>{{ service.service_description }}</p>
+            </div>
+        </article>
+    </section>
+
+    <aside class="option-container">
+        <div class="stick-container">
+            <div class="stick"></div>
+        </div>
+
+        <nav class="menu">
+            <button id="description-btn" class="data-button" onclick="toggleDisplay('.description-data')">Описание</button>
+            <button id="deliver-btn" class="data-button" onclick="toggleDisplay('.deliver-data')">Доставка</button>
+            <button id="payment-btn" class="data-button" onclick="toggleDisplay('.payment-data')">Оплата</button>
+        </nav>
+
+        <section class="description-data">
+            <div class="text" id="description-text">
+                Выберите опцию для отображения описания.
+            </div>
+            <div class="example">
+                <img id="example-image" src="" alt="">
+            </div>
+        </section>
+        <section class=deliver-data>
+            <div class = description>
+                <ul class= properties>
+                   <li>
+                       <p>Проект "Запечатало" осуществляет курьерскую и автомобильную доставку по Москве и МО. </p>
+                   </li>
+
+                    <li> <h3>Доставка продукции производится:</h3>
+                        <ul class = sub-properties>
+                            <li>если это было указано в оформленном заказе, подтверждено менеджером ведущим заказ и своевременно оплачено. </li>
+                            <li>в рабочее время - с понедельника по пятницу с 10 до 18 часов, или в другое время по согласованию. </li>
+                            <li>на следующий день после определения интервала времени и места доставки с Заказчиком. </li>
+                        </ul>
+                    </li>
+
+                    <li><p>Если заказ был доставлен по адресу и в интервале времени оговоренного с Заказчиком, а Заказчик или его доверенное лицо не смог принять заказ, то повторная доставка на любой адрес Заказчику будет осуществлена только после повторной оплаты доставки.</p></li>
+
+                    <li> <h3>Отгрузка продукции и выдача заказов:</h3>
+                        <ul class = sub-properties>
+                            <li>осуществляется со склада Проект "РГБатерфляй", расположенного по адресу -123007, Москва, ул. 4-ая Магистральная д.5</li>
+                            <li>производится в рабочее время - с понедельника по пятницу с 10 до 18 часов или в другое время по согласованию. </li>
+                        </ul>
+                    </li>
+                    <li><h3>Для юридических лиц:</h3>
+                        <p>Для получения продукции представителем Заказчика требуются:</p>
+                        <ul class = sub-properties>
+                            <li>Доверенность, оформленная на имя сотрудника организации, получающего товар,и заверенная печатью организации. </li>
+                            <li>Наличие паспорта гражданина России у лица, получающего товар. </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Без правильно оформленной доверенности , товар не может быть отгружен!</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="payment-data">
+            <div class = description>
+                <ul class= properties>
+                    <li><p>Так как проект "РГБатерфляй" занимается не типовой продукцией, а продукцией выпускаемой под конкретный заказ и с определенными параметрами, то по умолчанию, все работы и для физических и для юридических лиц, выполняются на на условиях 100% предоплаты (если в договоре не установлено иное).</p></li>
+                    <li>
+                        <ul class= sub-properties>
+                        <li>Оплата принимается только по безналичному расчету.</li>
+                        <li> Счет выставляется после согласования параметров запроса, оформленного Заказчиком и окончательного расчета заказа.</li>
+                        <li> Для выставления счёта необходимо - точное наименование организации, банковские реквизиты телефон контактного лица. </li>
+                        <li>Срок действия счёта - 10-ть банковских дней с даты его выставления.</li>
+                        <li> По истечении 10-ти дней, неоплаченный счет аннулируется.</li>
+                        <li> После оплаты счета, необходимо выслать или копию платежного поручения, либо проинформировать менеджера ведущего заказ, сообщив ему дату, номер оплаченного счета, а также сумму оплаты.</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </aside>
+</div>
+
+<script src= "{% static '/RGButterfly/js/service.js' %}"> </script>
+{% endblock %}

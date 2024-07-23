@@ -1,0 +1,89 @@
+{% extends "web/app.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" type="text/css">
+<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<link rel="stylesheet" href="{% static 'RGButterfly/css/main.css' %}" type="text/css" media="all">
+
+    <div class="container">
+        <div class="background-image-container">
+            <img src="{% static 'RGButterfly/img/main_page.png' %}" class="background-image"/>
+            <div class="slogan">
+                <p>RGButterfly<br/>Идеи<br/>которые<br/>видны</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = services-wrapper>
+        <div class="services">
+            <div class="name">
+                <p>Услуги</p>
+            </div>
+
+            <div class="stick"></div>
+
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <ul class="carousel">
+                    <li class="card">
+                        <div class="card-content">
+                            <div class="img"><img src="{% static 'RGButterfly/img/UF_printing.jpg' %}" alt="Image 1"></div>
+                            <h2>УФ печать на листовых материалах</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card-content">
+                            <div class="img"><img src="{% static 'RGButterfly/img/wide_formed.jpg' %}" alt="Image 2"></div>
+                            <h2>Широкоформатная латексная печать</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card-content">
+                            <div class="img"><img src="{% static 'RGButterfly/img/plotter.jpeg' %}" alt="Image 3"></div>
+                            <h2>Постпечатная <br> обработка</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card-content">
+                            <div class="img"><img src="{% static 'RGButterfly/img/montage.jpg' %}" alt="Image 4"></div>
+                            <h2>Монтажные <br> работы</h2>
+                        </div>
+                    </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class = "small-main">
+        <div class="small-header">
+            <h4>
+                Услуги
+            </h4>
+            <div class="small-stick"></div>
+
+        </div>
+        <ul>
+            <li class="small-main-card">
+                <div class ="small-main-img"><img src="{% static 'RGButterfly/img/UF_printing.jpg' %}" alt="Image 1"></div>
+                <h2>УФ печать на листовых материалах</h2>
+            </li>
+            <li class="small-main-card">
+                 <div class ="small-main-img"><img src="{% static 'RGButterfly/img/wide_formed.jpg' %}" alt="Image 2"></div>
+                        <h2>Широкоформатная латексная печать</h2>
+            </li>
+            <li class="small-main-card">
+                 <div class ="small-main-img"><img src="{% static 'RGButterfly/img/plotter.jpeg' %}" alt="Image 3"></div>
+                        <h2>Постпечатная <br> обработка</h2>
+            </li>
+            <li class="small-main-card">
+                 <div class ="small-main-img"><img src="{% static 'RGButterfly/img/montage.jpg' %}" alt="Image 4"></div>
+                        <h2>Монтажные <br> работы</h2>
+            </li>
+        </ul>
+    </div>
+    <script src= "{% static '/RGButterfly/js/main.js' %}"> </script>
+{% endblock %}
+

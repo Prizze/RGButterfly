@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/db91f6837d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'RGButterfly/css/app.css' %}" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <div class = "container">
+        <nav>
+            <ul>
+                <li><a href="{% url 'main' %}"> <div class ="div-img"> <img src="{% static 'RGButterfly/img/output-onlinepngtools.png' %}" alt="logo" > </div> RGButterfly</a></li>
+                <li class = "has-children">
+                    <button class="button" onclick="toggleSubMenu('.sub-menu')"> Услуги<span style="margin-left:4px;"><i id="chevron" class="fa-solid fa-chevron-down fa-xs"></i></span></button>
+                        <div class = "sub-menu">
+                            <div class = "hr"></div>
+                            <div class = "column-container">
+                                <div class = "column">
+                                    <h2>УФ печать на листовых материалах</h2>
+                                    <a href="/service/1/?option=1"><p>УФ печать на пластике</p></a>
+                                    <a href="/service/1/?option=2"><p>УФ печать на пенокартоне</p></a>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class = "column">
+                                    <h2>Широкоформатная латексная печать</h2>
+                                    <a href="/service/2/?option=3"><p>Печать плакатов на бумаге</p></a>
+                                    <a href="/service/2/?option=4"><p>Печать на самоклейке</p></a>
+                                    <a href="/service/2/?option=5"><p>Печать баннеров</p></a>
+                                    <a href="/service/2/?option=6"><p>Печать бэклитов</p></a>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class = "column">
+                                    <h2>Постпечатная обработка</h2>
+                                    <a href="/service/3/?option=7"><p>Плоттерная резка пленки</p></a>
+                                    <a href="/service/3/?option=8"><p>Холодное ламинирование и накатка на основу</p></a>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class = "column">
+                                    <h2>Монтажные работы</h2>
+                                    <a href="/service/4/?option=9"><p>Оклейка пленкой</p></a>
+                                    <a href="/service/4/?option=10"><p>Монтаж баннеров</p></a>
+                                </div>
+                            </div>
+                        </div>
+                 </li>
+                <li><a href="{% url 'about' %}">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class = "small-screen">
+        <div class = "small-container">
+            <div class = "left">
+                <div class = "content">
+                    <div class = "name">
+                        <div class = "small-img">
+                            <img src="{% static 'RGButterfly/img/output-onlinepngtools.png' %}" alt="logo" >
+                        </div>
+                        <div class = "rgbutterfly">
+                            <a href="{% url 'main' %}">RGButterfly</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "right">
+                <div class = "content">
+                    <i onclick="toggleSubMenu('.drop-menu')" class="fa-solid fa-bars fa-xl"></i>
+                </div>
+            </div>
+        </div>
+            <div class = "drop-menu">
+                    <ul>
+                        <div class = "up">
+                            <div class = "left"><li><a href="{% url 'main' %}"> Главная </a></li></div>
+                            <div class = "right"><i onclick="close_menu('.drop-menu')" id = "x-mark" class="fa-solid fa-xmark fa-2xl"></i></div>
+                        </div>
+                        <li><a href="{% url 'about' %}"> О нас </a></li>
+                        <li> <button onclick = "toggleServices()"> Услуги <i id = "chevron-small" class="fa-solid fa-chevron-down fa-xs"></i>  </button>
+                            <div class = "sub-menu-small">
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/1/?option=1">УФ печать на листовых материалах</a></p>
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/2/?option=3">Ширикоформатная латексная печать</a></p>
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/3/?option=7">Постпечатная обработка</a></p>
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/4/?option=9">Монтажные работы</a></p>
+                            </div>
+                        </li>
+                    </ul>
+
+            </div>
+    </div>
+</header>
+
+<main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+
+<footer>
+    <div class = "footer-large-screen">
+        <div class = "hr-footer"></div>
+        <div class = "column-container footer">
+            <div class = "column">
+                <h5>Наши телефоны:</h5>
+                <p>+7-(917)-519-79-75</p>
+                <p>+7-(905)-797-84-48</p>
+                <p>+7-(495)-741-95-58</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class = "column">
+                <h5>Наш адрес:</h5>
+                <p>123007, Москва, ул. 4-ая Магистральная д.5</p>
+                <p>ООО "Беренберг"</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class = "column">
+                <h5>2012-2024 г.</h5>
+                <h5>&copy Проект "РГБатерфляй"</h5>
+                <p>Использования материалов с сайта проекта
+    “РГБатерфляй” запрещено без согласия владельца сайта.</p>
+            </div>
+        </div>
+        </div>
+    <div class = "footer-small-screen">
+        <div class = "hr-footer"></div>
+        <div class = "small-part">
+            <h5>Наши телефоны</h5>
+            <div class = "footer-small-hr"></div>
+            <p>+7-(917)-519-79-75</p>
+            <p>+7-(905)-797-84-48</p>
+            <p>+7-(495)-741-95-58</p>
+        </div>
+        <div class = "small-part">
+            <h5 >Наш адрес</h5>
+            <div class = "footer-small-hr"></div>
+            <p>123007, Москва, ул. 4-ая Магистральная д.5</p>
+            <p>ООО "Беренберг"</p>
+        </div>
+        <div class = "small-part">
+            <h5>2012 - 2024 г.</h5>
+            <h5>&copy "РГБатерфляй" </h5>
+            <div class = "footer-small-hr"></div>
+            <p>Использования материалов с сайта проекта
+    “РГБатерфляй” запрещено без согласия владельца сайта.</p>
+        </div>
+    </div>
+</footer>
+<div id = "overlay"></div>
+
+<script src= "{% static '/RGButterfly/js/index.js' %}"></script>
+
+</body>
+</html>
