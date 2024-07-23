@@ -286,13 +286,14 @@ body {
     }
     .small-main .small-stick{
         height:2px;
-        background-color: black;
+        background-color: #0A1C34;
         width: 60%;
         margin-top: 10px;
     }
     .small-main .small-header h4{
         font-size: 8vw;
         font-weight: 500;
+        color: #0A1C34;
     }
 
 }

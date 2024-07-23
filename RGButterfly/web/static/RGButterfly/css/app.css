@@ -15,6 +15,7 @@ body{
 
 main{
     flex:1;
+    background-color: #EDEEF0;
 }
 header{
    background-color: white;
@@ -58,26 +59,30 @@ header nav > ul > li > a {
 header nav ul li .button{
     transition: all 0.3s ease;
 }
-header nav > ul > li a:hover{
+header nav > ul > li > a:hover{
     color: #5A89B9;
 }
-header nav ul li button:hover{
+header nav > ul > li > button:hover{
     color: #5A89B9;
+}
+.sub-menu a:hover{
+    color: #155a8f;
 }
 header nav ul li button{
     all: unset;
 }
 header .div-img {
-    background-color: green;
-    width: 70px;
-    height: 70px;
+    width: 4.5vw;
+    height: 4.5vw;
     margin-right: 5px;
-    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
     object-fit: cover;
 }
 header .div-img img {
-    width: 70px;
-    border-radius: 50%;
+    width: 4.5vw;
+
 }
 
 
@@ -99,7 +104,7 @@ header .sub-menu.open {
 header .sub-menu .hr {
     width: 0;
     height: 2px;
-    background-color: black;
+    background-color: #0A1C34;
     margin: 0 auto;
     margin-top: 5px;
     transition: width 0.5s ease;
@@ -123,7 +128,7 @@ header .sub-menu .hr.expand {
 }
 .vertical-line {
     width: 1px;
-    background-color: black;
+    background-color: #0A1C34;
     margin: 0 10px;
 }
 .column h2{
@@ -145,6 +150,7 @@ header .sub-menu .hr.expand {
     font-weight: 300;
     line-height: 1.3;
 }
+
 #overlay {
     position: fixed;
     left: 0;
@@ -180,7 +186,7 @@ footer{
 .hr-footer{
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: #0A1C34;
 }
 .footer h5{
     text-align:left;
@@ -251,24 +257,26 @@ footer{
 
     .right .content {
         align-items: flex-end; /* Выравнивание содержимого вправо */
+        color: #0A1C34;
     }
     .name{
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #0A1C34;
     }
     .small-img {
-        background-color: green;
-        width: 40px;
-        height: 40px;
+        width: 8w;
+        height: 8vw;
         margin-right: 5px;
-        border-radius: 50%;
         object-fit: cover;
+        display: flex;
+        justify-content:center;
+        align-items:center;
     }
 
     .small-img img{
-        width: 40px;
-        border-radius: 50%;
+        width: 8vw;
     }
     .rgbutterfly{
         font-size: 4.5vw;
@@ -277,6 +285,7 @@ footer{
     .rgbutterfly a{
         text-decoration: none;
         color:  #0A1C34;
+
     }
     .drop-menu{
         display: block;
@@ -317,6 +326,7 @@ footer{
         width:100%;
         display: flex;
         align-items: flex-end;
+        color: #0A1C34;
      }
 
     .drop-menu ul li button{
@@ -324,6 +334,7 @@ footer{
         font-size: 5vw;
         line-height: 2;
         font-weight: 400;
+        color: #0A1C34;
     }
     .drop-menu ul li a{
         text-decoration: none;
@@ -331,7 +342,6 @@ footer{
         font-size: 5vw;
         font-weight: 400;
         line-height: 2;
-
     }
     .drop-menu .sub-menu-small{
         background-color: white;

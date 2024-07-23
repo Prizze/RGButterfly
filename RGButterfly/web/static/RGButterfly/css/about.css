@@ -1,8 +1,8 @@
 .wrapper {
     display: flex;
+    flex-direction: row;
     background-color: #EDEEF0;
     height: 100%;
-    margin: 0 auto;
     padding: 0;
     overflow: hidden;
     padding-bottom: 5%;
@@ -24,11 +24,13 @@
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
+
 }
 
 .wrapper-map{
     display: flex;
     margin-top: 60px;
+    align-self:center;
 }
 
 .container-map{
@@ -42,6 +44,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .wrapper-overview{
@@ -58,8 +61,8 @@
     width: 60%;
     height: 3px;
     border-radius: 5px;
-    background-color: #1b1b1b;
     margin-top: 30px;
+    background-color: #0A1C34;
 }
 
 .container-text{
@@ -67,13 +70,12 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
 }
 
 .wrapper-text{
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .container-post{
@@ -87,8 +89,25 @@
     text-align: justify;
 
 }
-.text p{
-  font-family: monospace;
+.head h1{
+    font-weight: 600 ;
+    font-size: 3vw;
+    font-family: monospace;
+    color: #0A1C34;
+}
+
+.text p:not(:last-child){
+  font-weight: 300 ;
+  font-size: 1.5vw;
+  text-indent: 2.4vw;
+  margin-bottom: 1.5vh;
+  color:#2E4553;
+}
+.text p:last-child{
+  font-weight: 300 ;
+  font-size: 1.5vw;
+  margin-bottom: 1.5vh;
+  color:#2E4553;
 }
 
 .post-text{
@@ -105,11 +124,7 @@
     height: 30px;
 }
 
-h1{
-    font-size: 46px;
-    font-family: monospace;
-    font-weight: 600;
-}
+
 
 .container-map-big{
     visibility: visible;
@@ -182,13 +197,14 @@ p{
     }
 
     .wrapper-overview{
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
     h1{
-        font-size: 44px;
+        font-weight: 500 ;
+        font-size: 3.4vw;
         font-family: monospace;
-        font-weight: 600;
+
         margin-bottom: 20px;
     }
 }
@@ -289,11 +305,11 @@ p{
     }
 
     .wrapper-main{
-        margin-top: 20%;
+        margin-top: 5%;
     }
 
     .wrapper-overview{
-        margin-top: 20%;
+        margin-top: 5%;
     }
 
     h1{
@@ -314,12 +330,12 @@ p{
 
     .wrapper-overview{
         width: 80%;
-        margin-top: 5vh;
+        margin-top: 1vh;
     }
 
     .wrapper-main{
         width: 80%;
-        margin-top: 5vh;
+        margin-top: 1vh;
     }
     .head .stick{
         margin-top: 1vh;
@@ -332,4 +348,21 @@ p{
     .container-main{
         margin: auto;
     }
+    .text p:not(:last-child){
+        font-weight: 400 ;
+        font-size: 3.6vw;
+        text-indent: 7vw;
+        margin-bottom: 1vh;
+    }
+    .text p:last-child{
+        font-weight: 400 ;
+        font-size: 3.6vw;
+
+        margin-bottom: 1vh;
+    }
+    .head h1{
+        font-weight: 400 ;
+        font-size: 8vw;
+    }
+
 }
