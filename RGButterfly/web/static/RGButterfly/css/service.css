@@ -225,6 +225,8 @@ body {
 
     .main-container{
         padding: 5% 10% 5% 10%;
+        display:flex;
+        flex-direction:column;
     }
 
     .service-container {
@@ -239,11 +241,12 @@ body {
         align-items: center;
     }
 
-    .service-image {
-        width: 100%;
+    .service-img-container img {
+        width: 75vw;
+        margin-top: 0;
+        margin-bottom: 3vh;
         height: auto;
-        max-height: 60%;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .service-about {
@@ -265,11 +268,12 @@ body {
         border-radius: 14px;
         background-color: var(--button-bg-color);
         margin-bottom: 3%;
+        max-width: 100%;
     }
 
     .option-toggle .button-wrapper{
         height: auto;
-        flex:1;
+        flex: 1;
         display: flex;
         justify-content: center;
     }
@@ -288,6 +292,7 @@ body {
     .option-container {
         width: 100%;
         margin-top: 20px;
+        align-self: center;
     }
 
     .service-description{
@@ -330,18 +335,46 @@ body {
     }
 
     .example {
-        width: 100%;
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
+        align-self: center;
     }
 
     #example-image {
         width: 100%;
-        max-width: 80%;
         height: auto;
         object-fit: contain;
-        margin-top: 10%;
     }
+    .properties{
+        list-style: none;
+    }
+    .properties > li {
+        margin-bottom: 3vh;
+        text-align:justify;
+    }
+    .option-container .properties li p {
+        font-size: 3vw;
+        font-weight: 300;
+        line-height: 1.8;
+        margin-top: 2vh;
+    }
+    .option-container .properties li h3 {
+        font-size: 3.5vw;
+        font-weight: 500;
+    }
+
+    .option-container .properties .sub-properties {
+        margin-left: 2vw;
+    }
+    .option-container .properties .sub-properties li{
+        list-style-type:"– ";
+        font-size: 3vw;
+        font-weight: 300;
+        line-height: 1.4;
+        margin-top: 2vh;
+    }
+
 
 }

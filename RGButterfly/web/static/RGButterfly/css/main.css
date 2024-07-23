@@ -271,7 +271,9 @@ body {
     .small-main .small-main-card h2{
         margin-top:10px;
         font-size: 4vw;
-        text-align: left;
+        font-weight: 500;
+        text-align: center;
+        color: #547392;
         /* top | right | bottom | left */
         padding: 15px 10px 15px 10px;
     }
@@ -290,6 +292,7 @@ body {
     }
     .small-main .small-header h4{
         font-size: 8vw;
+        font-weight: 500;
     }
 
 }
