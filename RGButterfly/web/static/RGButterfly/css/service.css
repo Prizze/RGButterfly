@@ -61,8 +61,6 @@ body {
     width: fit-content;
 }
 
-
-
 .option-button {
     border: none;
     padding: 10px 20px;
@@ -182,8 +180,9 @@ body {
     }
 
     .service-name {
-        font-size: large;
+        font-size: 5vw;
         margin: 10px 0;
+        text-align: center;
     }
 
     .option-toggle {
@@ -194,23 +193,21 @@ body {
         margin-bottom: 3%;
     }
 
-
-
     .option-toggle .button-wrapper{
         height: auto;
         flex:1;
         display: flex;
         justify-content: center;
     }
+
     .option-button {
         text-align: center;
         border: none;
-        /* Сверху | Справа | Снизу | Слева */
         padding: 5px;
         background-color: var(--button-bg-color);
         color: var(--text-color);
         cursor: pointer;
-        font-size: small;
+        font-size: 3vw;
         width: 100%;
     }
 
@@ -219,28 +216,34 @@ body {
         margin-top: 20px;
     }
 
+    .service-description{
+        width: 100%;
+        font-size:  3vw;
+    }
+
     .description-data,
     .deliver-data,
     .payment-data {
         width: 100%;
         margin: 10px 0;
         padding: 0 10px;
+        font-size:  3vw;
     }
-.menu {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        row-gap: 10px;
-        margin: 20px 0;
 
+    .menu {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+            margin: 20px 0;
     }
+
     .menu button{
-        /* top and bottom | left and right */
         padding: 10px 10px;
         min-width: 22vw;
         font-size:  3.6vw;
-
     }
+
     .data-button {
         width: 80%;
         padding: 10px 0;
@@ -261,7 +264,7 @@ body {
 
     #example-image {
         width: 100%;
-        max-width: 80%; /* Ограничиваем максимальную ширину изображения */
+        max-width: 80%;
         height: auto;
         object-fit: contain;
         margin-top: 10%;
