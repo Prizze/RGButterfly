@@ -74,10 +74,9 @@ body {
 }
 
 .name p {
-    font-family: monospace;
     font-size: 3vw;
     color: #0A1C34;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
 }
 
@@ -184,9 +183,8 @@ body {
 }
 
 .card h2 {
-    font-family: monospace;
     font-weight: 400;
-    font-size: 1.56rem;
+    font-size: 1.9vw;
     margin: 0;
     color: #547392;
     flex: 2;

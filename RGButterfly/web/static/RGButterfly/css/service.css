@@ -6,14 +6,14 @@
     --text-selected-color: #ffffff;
     --stick-bg-color: #0A1C34;
 }
-    .option-toggle .button-wrapper{
-        flex:1;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
+.option-toggle .button-wrapper{
+    flex:1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 body {
     margin: 0;
     padding: 0;
@@ -24,6 +24,7 @@ body {
     display: flex;
     width: 100%;
     height: 60%;
+    margin-bottom: 5vh;
 }
 
 .service-img-container {
@@ -32,12 +33,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+.service-img-container img{
+    border-radius: 6px;
+    width: 32vw;
+    height: auto;
+    margin: 5vh 0;
+}
 
 .service-image {
-    width: 100%;
-    height: auto;
-    max-height: 72%;
-    object-fit: contain;
 }
 
 .service-about {
@@ -48,26 +51,37 @@ body {
 
 .service-name {
     margin: 6% 0 3% 0;
-    font-size: x-large;
+    font-size: 2.8vw;
+    font-weight: 500;
 }
 
 .option-toggle {
     display: flex;
     justify-content: center;
-    border-radius: 14px;
+    border-radius: 11px;
     overflow: hidden;
     background-color: var(--button-bg-color);
     margin-bottom: 3%;
     width: fit-content;
+    max-width: 80%;
 }
 
 .option-button {
+
     border: none;
-    padding: 10px 20px;
+    padding: 0.4vh 1vw;
     background-color: var(--button-bg-color);
     color: var(--text-color);
     cursor: pointer;
-    font-size: medium;
+    font-size: 1.3vw;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+}
+ .option-button:hover{
+    background-color: #cfcfcf;
+    border-radius: 11px;
+    transition: background-color 0.2s ease-out;
 }
 
 .option-button.selected {
@@ -75,12 +89,24 @@ body {
     color: var(--text-selected-color);
     height:100%;
     width: 100%;
+    transition: background-color 0.3s ease-out, color 0.1s ease-out;
 }
 
 .option-toggle .option-button.selected {
-    border-radius: 14px;
+    border-radius: 11px;
+}
+.service-description{
+    font-size:  1.4vw;
+    font-weight: 300;
+    width: 80%;
 }
 
+.service-description p{
+    text-align: justify;
+    line-height: 1.4;
+    text-indent: 3vw;
+
+}
 .option-container {
     display: flex;
     flex-direction: column;
@@ -93,7 +119,7 @@ body {
 }
 
 .stick {
-    width: 96%;
+    width: 89%;
     height: 2px;
     border-radius: 4px;
     background-color: var(--stick-bg-color);
@@ -101,23 +127,30 @@ body {
 
 .menu {
     display: flex;
-    column-gap: 13%;
+    column-gap: 5vw;
     margin: 3% 8% 0;
 }
 
 .data-button {
     border: none;
+    min-width: 10vw;
     border-radius: 15px;
     padding: 10px 20px;
     background-color: var(--button-bg-color);
     color: var(--text-color);
     cursor: pointer;
-    font-size: medium;
+    font-size: 1.1vw;
+    font-weight: 400:
 }
-
+.data-button:hover{
+    background-color: #cfcfcf;
+    border-radius: 15px;
+    transition: background-color 0.2s ease-out;
+}
 .data-button.selected {
     background-color: var(--button-selected-bg-color);
     color: var(--text-selected-color);
+    transition: background-color 0.3s ease-out, color 0.1s ease-out;
 }
 
 .description-data,
@@ -130,15 +163,22 @@ body {
 }
 
 .example {
-    width: 43%;
+    width: 60%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5A89B9;
+    padding: 4px;
+    border-radius: 8px;
+
+
 }
 
 #example-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-top: 10%;
+
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .description-data.active,
@@ -146,6 +186,40 @@ body {
 .payment-data.active {
     display: flex;
 }
+
+.option-container .description{
+
+}
+.properties{
+    list-style: none;
+}
+.properties > li {
+    margin-bottom: 5vh;
+
+}
+.option-container .properties li p {
+    font-size: 1.2vw;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 2vh;
+}
+.option-container .properties li h3 {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+.option-container .properties .sub-properties {
+    margin-left: 2vw;
+}
+.option-container .properties .sub-properties li{
+    list-style-type:"– ";
+     font-size: 1.2vw;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 2vh;
+}
+
+
 
 @media (max-width: 768px) {
 

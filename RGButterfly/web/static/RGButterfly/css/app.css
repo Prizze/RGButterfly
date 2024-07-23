@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'TT Norms Pro', sans-serif;
 }
 body{
     display: flex;
@@ -42,10 +43,9 @@ header nav ul li {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 1.7vw;
+    font-weight: 700;
     color: #0A1C34;
-    font-family: monospace;
 }
 header nav > ul > li > a {
     position:relative;
@@ -98,7 +98,7 @@ header .sub-menu.open {
 }
 header .sub-menu .hr {
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color: black;
     margin: 0 auto;
     margin-top: 5px;
@@ -128,20 +128,21 @@ header .sub-menu .hr.expand {
 }
 .column h2{
     text-align: left;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-bottom: 3vh;
     height: 60px;
     color: #0A1C34;
     line-height: 1.5;
 }
 .column a{
     text-align: left;
-    font-size: 20px;
+    font-size: 1.35vw;
     margin-top: 10px;
     display: flex;
     text-decoration: none;
     color: #3D79A7;
-    font-weight: lighter;
+    font-weight: 300;
     line-height: 1.3;
 }
 #overlay {
@@ -173,24 +174,25 @@ footer{
 .footer{
     margin-top:10px;
     margin-bottom:10px;
-    font-family:Roboto, mono;
+
 
 }
 .hr-footer{
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: black;
 }
 .footer h5{
     text-align:left;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1.2vw;
+    font-weight: 500;
     margin-bottom: 5px;
     color: #0A1C34;
 }
 .footer p{
     text-align:left;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: 1vw;
     margin-top: 5px;
     color: #547392;
     }
@@ -319,14 +321,14 @@ footer{
         all: unset;
         font-size: 28px;
         line-height: 2;
-        font-family: monospace;
+
     }
     .drop-menu ul li a{
         text-decoration: none;
         color: #0A1C34;
         font-size: 28px;
         line-height: 2;
-        font-family: monospace;
+
     }
     .drop-menu .sub-menu-small{
         background-color: white;
