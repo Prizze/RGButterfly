@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'RGButterfly/css/app.css' %}" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet">
 
 </head>
 <body>
@@ -18,7 +19,7 @@
     <div class = "container">
         <nav>
             <ul>
-                <li><a href="{% url 'main' %}"> <div class ="div-img"> <img src="{% static 'RGButterfly/img/plain-butterfly_62507.png' %}" alt="logo" > </div> RGButterfly</a></li>
+                <li><a href="{% url 'main' %}"> <div class ="div-img"> <img src="{% static 'RGButterfly/img/output-onlinepngtools.png' %}" alt="logo" > </div> RGButterfly</a></li>
                 <li class = "has-children">
                     <button class="button" onclick="toggleSubMenu('.sub-menu')"> Услуги<span style="margin-left:4px;"><i id="chevron" class="fa-solid fa-chevron-down fa-xs"></i></span></button>
                         <div class = "sub-menu">
@@ -63,10 +64,10 @@
                 <div class = "content">
                     <div class = "name">
                         <div class = "small-img">
-                            <img src="{% static 'RGButterfly/img/plain-butterfly_62507.png' %}" alt="logo" >
+                            <img src="{% static 'RGButterfly/img/output-onlinepngtools.png' %}" alt="logo" >
                         </div>
                         <div class = "rgbutterfly">
-                            RGButterfly
+                            <a href="{% url 'main' %}">RGButterfly</a>
                         </div>
                     </div>
                 </div>
@@ -80,16 +81,16 @@
             <div class = "drop-menu">
                     <ul>
                         <div class = "up">
-                            <div class = "left"><li><a href=""> Главная </a></li></div>
+                            <div class = "left"><li><a href="{% url 'main' %}"> Главная </a></li></div>
                             <div class = "right"><i onclick="close_menu('.drop-menu')" id = "x-mark" class="fa-solid fa-xmark fa-2xl"></i></div>
                         </div>
-                        <li><a href=""> О нас </a></li>
+                        <li><a href="{% url 'about' %}"> О нас </a></li>
                         <li> <button onclick = "toggleServices()"> Услуги <i id = "chevron-small" class="fa-solid fa-chevron-down fa-xs"></i>  </button>
                             <div class = "sub-menu-small">
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">УФ печать на листовых материалах</a></p>
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">Ширикоформатная латексная печать</a></p>
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">Постпечатная обработка</a></p>
-                                <p> <i class="fa-solid fa-minus"></i> <a href="">Монтажные работы</a></p>
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/1/?option=1">УФ печать на листовых материалах</a></p>
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/2/?option=3">Ширикоформатная латексная печать</a></p>
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/3/?option=7">Постпечатная обработка</a></p>
+                                <p> <i class="fa-solid fa-minus fa-xs"></i> <a href="/service/4/?option=9">Монтажные работы</a></p>
                             </div>
                         </li>
                     </ul>

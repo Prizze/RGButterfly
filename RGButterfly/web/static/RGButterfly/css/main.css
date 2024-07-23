@@ -4,7 +4,9 @@ body {
    background-color: #EDEEF0;
    box-sizing: border-box;
 }
-
+.small-main{
+    display: none;
+}
 .container {
     width: 100%;
     max-width: 1920px;
@@ -72,10 +74,9 @@ body {
 }
 
 .name p {
-    font-family: monospace;
     font-size: 3vw;
     color: #0A1C34;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
 }
 
@@ -182,9 +183,8 @@ body {
 }
 
 .card h2 {
-    font-family: monospace;
     font-weight: 400;
-    font-size: 1.56rem;
+    font-size: 1.9vw;
     margin: 0;
     color: #547392;
     flex: 2;
@@ -205,4 +205,95 @@ body {
     .wrapper .carousel {
         grid-auto-columns: 100%;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .services-wrapper{
+        display:none;
+    }
+    .container .slogan{
+        padding: 0;
+    }
+    .container .slogan p{
+        font-size: 5vw;
+    }
+    .small-main{
+        display: block;
+    }
+    .small-main ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Два столбца */
+        list-style:none;
+        margin-top: 30px;
+        column-gap: 0;
+    }
+    .small-main .small-main-card{
+        display:flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        align-items:center;
+        background-color: white;
+        /* top | right | bottom | left */
+        padding: 10px 5px 10px 5px;
+        border-radius: 8px;
+        }
+
+    .small-main ul li:nth-child(1),
+    .small-main ul li:nth-child(3) {
+        /* top | right | bottom | left */
+        margin: 0 2vw 20px 4vw;
+    }
+
+    .small-main ul li:nth-last-child(1),
+    .small-main ul li:nth-last-child(3) {
+        /* top | right | bottom | left */
+        margin: 0 4vw 20px 2vw;
+    }
+
+    }
+    .small-main .small-main-img{
+        width: auto;
+        height: auto;
+        /* top | right | bottom | left */
+        padding: 5px 5px 5px 5px;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        border-radius: 50%;
+        background-color: #547392;
+    }
+    .small-main .small-main-img img{
+        width: 33vw;
+        height: 33vw;
+        border-radius: 50%;
+         object-fit: cover;
+    }
+    .small-main .small-main-card h2{
+        margin-top:10px;
+        font-size: 4vw;
+        font-weight: 500;
+        text-align: center;
+        color: #547392;
+        /* top | right | bottom | left */
+        padding: 15px 10px 15px 10px;
+    }
+    .small-main .small-header{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .small-main .small-stick{
+        height:2px;
+        background-color: #0A1C34;
+        width: 60%;
+        margin-top: 10px;
+    }
+    .small-main .small-header h4{
+        font-size: 8vw;
+        font-weight: 500;
+        color: #0A1C34;
+    }
+
 }
