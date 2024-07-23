@@ -6,7 +6,14 @@
     --text-selected-color: #ffffff;
     --stick-bg-color: #0A1C34;
 }
-
+    .option-toggle .button-wrapper{
+        flex:1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 body {
     margin: 0;
     padding: 0;
@@ -40,7 +47,6 @@ body {
 }
 
 .service-name {
-    /* top | right | bottom | left */
     margin: 6% 0 3% 0;
     font-size: x-large;
 }
@@ -48,19 +54,11 @@ body {
 .option-toggle {
     display: flex;
     justify-content: center;
-    align-items: center;
     border-radius: 14px;
     overflow: hidden;
     background-color: var(--button-bg-color);
     margin-bottom: 3%;
-
     width: fit-content;
-}
-#option-7, #option-8, #option-1, #option-2, #option-9, #option-10{
-    width: 50%;
-}
-#option-3, #option-4, #option-5, #option-6{
-    width: 25%;
 }
 
 .option-button {
@@ -76,13 +74,11 @@ body {
     background-color: var(--button-selected-bg-color);
     color: var(--text-selected-color);
     height:100%;
+    width: 100%;
 }
 
 .option-toggle .option-button.selected {
     border-radius: 14px;
-}
-
-.service-description {
 }
 
 .option-container {
@@ -149,4 +145,129 @@ body {
 .deliver-data.active,
 .payment-data.active {
     display: flex;
+}
+
+@media (max-width: 768px) {
+
+    .main-container{
+        padding: 5% 10% 5% 10%;
+    }
+
+    .service-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .service-img-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-image {
+        width: 100%;
+        height: auto;
+        max-height: 60%;
+        object-fit: contain;
+    }
+
+    .service-about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-name {
+        font-size: 5vw;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .option-toggle {
+        display: flex;
+        align-items: normal;
+        border-radius: 14px;
+        background-color: var(--button-bg-color);
+        margin-bottom: 3%;
+    }
+
+    .option-toggle .button-wrapper{
+        height: auto;
+        flex:1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .option-button {
+        text-align: center;
+        border: none;
+        padding: 5px;
+        background-color: var(--button-bg-color);
+        color: var(--text-color);
+        cursor: pointer;
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    .option-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .service-description{
+        width: 100%;
+        font-size:  3vw;
+    }
+
+    .description-data,
+    .deliver-data,
+    .payment-data {
+        width: 100%;
+        margin: 10px 0;
+        padding: 0 10px;
+        font-size:  3vw;
+    }
+
+    .menu {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+            margin: 20px 0;
+    }
+
+    .menu button{
+        padding: 10px 10px;
+        min-width: 22vw;
+        font-size:  3.6vw;
+    }
+
+    .data-button {
+        width: 80%;
+        padding: 10px 0;
+    }
+
+    .example-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .example {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #example-image {
+        width: 100%;
+        max-width: 80%;
+        height: auto;
+        object-fit: contain;
+        margin-top: 10%;
+    }
+
 }
