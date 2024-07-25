@@ -14,3 +14,6 @@ def service(request, service_id):
     service = get_object_or_404(Service, id=service_id)
     options = service.options.all()
     return render(request, 'web/service.html', {'service': service, 'options': options})
+
+def handler404(request, exception):
+    return render(request, 'web/404.html', status=404)
