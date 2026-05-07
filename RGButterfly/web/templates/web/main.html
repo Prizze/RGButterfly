@@ -1,12 +1,13 @@
 {% extends "web/app.html" %}
 {% load static %}
 
-{% block content %}
-
+{% block extra_css %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" type="text/css">
-<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 <link rel="stylesheet" href="{% static 'RGButterfly/css/main.css' %}" type="text/css" media="all">
+{% endblock %}
 
+{% block content %}
     <div class="container">
         <div class="background-image-container">
             <img src="{% static 'RGButterfly/img/main_page.png' %}" class="background-image"/>
@@ -16,7 +17,7 @@
         </div>
     </div>
 
-    <div class = services-wrapper>
+    <div class="services-wrapper">
         <div class="services">
             <div class="name">
                 <p>Услуги</p>

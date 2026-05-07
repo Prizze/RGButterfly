@@ -8,8 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RGButterfly</title>
     <script src="https://kit.fontawesome.com/db91f6837d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'RGButterfly/css/app.css' %}" type="text/css" media="all"
+    <link rel="stylesheet" href="{% static 'RGButterfly/css/app.css' %}" type="text/css" media="all">
     <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
     <link rel="icon" href="{% static 'RGButterfly/img/output-onlinepngtools.png' %}" type="image/x-icon">
 
 </head>
@@ -110,19 +111,18 @@
         <div class = "column-container footer">
             <div class = "column">
                 <h5>Наши телефоны:</h5>
-                <p>+7-(917)-519-79-75</p>
-                <p>+7-(905)-797-84-48</p>
-                <p>+7-(495)-741-95-58</p>
+            <p>+7 (495) 741-95-58</p>
+            <p>+7 (905) 797-84-48</p>
+            <p>+7 (917) 519-79-75</p>
             </div>
             <div class="vertical-line"></div>
             <div class = "column">
                 <h5>Наш адрес:</h5>
                 <p>123007, Москва, ул. 4-ая Магистральная д.5</p>
-                <p>ООО "Беренберг"</p>
             </div>
             <div class="vertical-line"></div>
             <div class = "column">
-                <h5>2012-2024 г.</h5>
+                <h5>2006-2026 г.</h5>
                 <h5>&copy Проект "РГБатерфляй"</h5>
                 <p>Использования материалов с сайта проекта
     “РГБатерфляй” запрещено без согласия владельца сайта.</p>
@@ -134,18 +134,17 @@
         <div class = "small-part">
             <h5>Наши телефоны</h5>
             <div class = "footer-small-hr"></div>
-            <p>+7-(917)-519-79-75</p>
-            <p>+7-(905)-797-84-48</p>
-            <p>+7-(495)-741-95-58</p>
+            <p>+7 (495) 741-95-58</p>
+            <p>+7 (905) 797-84-48</p>
+            <p>+7 (917) 519-79-75</p>
         </div>
         <div class = "small-part">
             <h5 >Наш адрес</h5>
             <div class = "footer-small-hr"></div>
             <p>123007, Москва, ул. 4-ая Магистральная д.5</p>
-            <p>ООО "Беренберг"</p>
         </div>
         <div class = "small-part">
-            <h5>2012 - 2024 г.</h5>
+            <h5>2006 - 2026 г.</h5>
             <h5>&copy "РГБатерфляй" </h5>
             <div class = "footer-small-hr"></div>
             <p>Использования материалов с сайта проекта
